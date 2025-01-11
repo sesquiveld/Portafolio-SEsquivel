@@ -1,0 +1,771 @@
+:root {
+    --color-de-fondo: #f8e6e6;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+.roboto {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', 'roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.5;
+   
+}
+
+ol, ul, li {
+    list-style: none ;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+
+.cabecera{
+    display: flex;
+    justify-content: center;
+    align-items: center top;
+    background-image: url('assets/encabezado.png');
+    background-size: cover; 
+    background-position: center;
+    height: 50px;  
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    z-index: 30;
+}
+
+.cabecera__logo{
+    width: 20px;
+    height: 20px;
+    
+}
+.navegacion__elemento a:hover {
+    color: #b1a8a8; 
+}
+
+
+.navegacion__lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+
+  /* Presentación inicial del portafolio */
+  
+  .contenedor__presentacion{
+      background-image: url('/assets/Inicio.png');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 100%;
+      height: 100vh; 
+      padding-bottom: 5rem;
+      
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+     
+  }
+  .presentacion__texto{
+      font-size: 1.2rem;
+      align-items: center;
+      justify-content: center;
+      padding-left: 7%;
+      padding-right: 45%;
+      padding-top: 20%;
+      align-content: stretch;
+      text-align: justify;
+  }
+  .presentacion__redes{
+      padding-left: 1%;
+      padding-right: 30%;
+      padding-top: 0.5%;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      
+  }
+
+  /* Redes sociales */
+  .redes {
+      list-style-type: none;   
+      display: flex;           
+      justify-content: flex-start; 
+      padding: 0,5px;           
+  }
+
+  .redes__img {
+      margin: 0 15px;         
+  }
+
+  .redes__img a {
+      text-decoration: none;  
+      color: #000;           
+      font-size: 18px;        
+      display: flex;          
+      align-items: center;    
+  }
+
+  .redes__img img {
+      width: 14px;           
+      height: auto;          
+      margin-left: 10px;     
+      transition: transform 0.3s; 
+  }
+
+  .redes__img a:hover img {
+      transform: scale(1.2); 
+  }
+
+  .redes__img a:hover {
+      color: #b1a8a8;               
+  }
+
+
+  /* Sobre- mi y Aficiones */
+
+  .contenedor__sobremi{
+      background-image: url('/assets/sobremi1.png');
+      display: flex;
+      justify-content: space-between;
+      
+      width: 100%;
+      height: 100vh;
+      gap: 2rem;
+      background-size: contain; 
+      background-repeat: no-repeat;
+      background-position: center top;
+      gap: 1rem; 
+
+  }
+
+  .sobre-mi__texto{
+        
+      padding-top: 44%;
+      padding-left: 150px;
+      gap:20px;
+      width: 500px;
+      justify-content: start;
+      text-align: justify;
+      
+  }
+  
+  .aficiones__lista {   
+      padding-top: 10%;
+      padding-left: 200px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      grid-gap: 230px; 
+      justify-items: baseline-position;   
+      align-items: baseline;
+           
+  }
+
+  .aficiones__elemento {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: left;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .aficiones__icono {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 40px;
+      
+  }
+  
+  .aficiones__nombre {
+      font-size: 1rem;
+      color: #333;
+      margin: 0;
+  }
+
+/*Hablilidades*/
+  
+    .contenedor__habilidades{
+        background-image: url('/assets/habilidades.png');
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    
+}
+
+
+   .habilidades__lista {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px;   
+    width: 900px; 
+    max-width: 1200px; 
+    padding: 1rem; 
+    box-sizing: border-box; 
+  }
+  
+  .habilidades__elemento {
+    
+    background-color: #f8e6e6; 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 140px;
+      height: 110px;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1); 
+      border-radius: 10px; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .habilidades__icono {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+  }
+  
+  .habilidades__nombre {
+      font-size: 1rem;
+      color: #333;
+      margin: 0;
+  }
+      
+  
+/* Formación Academica */
+ 
+
+.contenedor__formacion{
+    background-image: url('/assets/formacion.png');
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.formacion__lista {
+
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px; 
+    width: 800px; 
+    height: 500px;
+    max-width: 1200px; 
+    padding:0.3rem; 
+    box-sizing: border-box; 
+  }
+  
+
+.formacion__elemento {
+
+    background-color: #f8e6e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+    height: 200px;
+    box-sizing: border-box;
+}  
+  /* Proyectos */
+
+  .contenedor__proyectos{
+    background-image: url('/assets/proyectos.png');
+    display: flex;
+    justify-content: space-evenly;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+  }
+  .logoGithub{
+    margin-top: 140px;
+    width: 30px;
+  }
+
+  .proyectos__lista {
+    margin-top: 50px;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
+    gap: 40px; 
+    max-width: 1200px;
+    padding:0.3rem;  
+    box-sizing: border-box;  
+  }
+
+  .proyectos__elemento{
+    display: flex;
+    background-color: #f8e6e6;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: top;
+    width: 1000px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    margin-left: 100px;
+   
+  }
+    
+
+/* Contacto */
+.contenedor__contacto{
+    background-image: url('/assets/contacto.png');
+    justify-content: center;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+
+
+.contacto__redes ul {
+    margin-top: 520px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px; 
+}
+
+.redes__img {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.redes__img img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.redes__img a:hover img {
+    transform: scale(1.2); 
+}
+
+/* Formulario */
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    box-sizing: border;  
+    padding: 2rem;
+    background-color: #f8e6e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: 280px;
+    
+       
+}
+
+.contacto__campo {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 1500px;
+    
+}
+
+.contacto__campo--textarea {
+    height: 100px;
+    resize: none;
+    font-size: 1rem;
+}
+
+.contacto__button{
+    background:#e5c784;
+    color:#fff;
+    border:none;
+    position:relative;
+    width: 400px;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    justify-items: center;
+    margin-left: 105px;
+}
+.contacto__button:hover{
+    background:#fff;
+    color:#ebd8b0;
+  }
+  
+  .contacto__button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0e8d6;
+    transition:400ms ease all;
+  }
+  .contacto__button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .contacto__button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+
+
+/********************************************************************************************************************************************
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+    .cabecera {
+        flex-direction: column;
+        height: 50px; 
+        padding: 5px 0;
+        position: fixed;
+    }
+
+    .cabecera__logo {
+        width: 20px; 
+        height: 20px;
+        margin-left: 220px;
+    }
+
+    .navegacion__lista {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .navegacion__elemento a {
+        font-size: 0.9rem;
+    }
+
+    .contenedor__presentacion {
+        padding-top: 20%;
+        background-size: contain; 
+        width: 768px;
+        margin-left :40px;
+        padding-bottom: 5rem;
+        justify-content: center;
+
+    }
+
+    .presentacion__texto {
+        padding: 20px;
+        width: 320px; 
+        font-size: 0.8rem;
+        padding-left: 1%;        
+        align-content: stretch;
+        margin-right: 120px;
+    }
+
+    .contenedor__sobremi {
+        gap: 1rem;
+    }
+
+    .sobre-mi__texto {
+        padding: 10px;
+        width: 100%;
+        margin-top: 120px;
+        margin-left: 40px;
+        font-size: 0.8rem;
+    }
+
+    .aficiones__lista {
+        grid-template-rows: repeat(auto-fit, minmax(40px, 1fr)); 
+        grid-gap: 10px;
+    }
+
+    .habilidades__lista {
+        margin-top: 250px;
+        grid-template-columns: repeat(4, minmax(190px, 0fr));
+        
+    }
+
+    .formacion__lista {
+        margin-top: 250px;
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        gap: 0.1px;
+    }
+
+    .habilidades__elemento{
+        width: 120px;
+        height: 100px;
+        padding: 1px;
+        gap:2px;
+    }
+
+    .formacion__elemento{
+        width: 150px;
+        height: 150px;
+        padding: 1px;
+        gap:2px;
+        font-size: 0.8rem;
+    }
+
+
+    .habilidades__icono, .aficiones__icono {
+        width: 50px;
+        height: 50px;
+    }
+
+  
+
+    .proyectos__elemento {
+        margin-top: 30px;
+        margin-left: 40px;
+        flex-direction: column;
+        width: 50%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .contenedor__contacto{
+        display: flex;
+        width: 768px;
+        background-size: contain; 
+        background-repeat: no-repeat;
+        align-items: center;
+        width: 768px
+      }
+
+    .contacto__redes {
+        margin-top: 620px;
+    }    
+    .contacto__formulario {
+        width: 400px;
+        max-width: 768;
+        margin-top: 120px;
+        margin-left: 40px;
+        padding: 1rem;
+        background-color: #f8e6e6;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        
+    }
+    .contacto__campo {
+        width: 350px;
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .contacto__button {
+        width: 250px;
+        padding: 0.8rem;
+        font-size: 1rem;
+
+      }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .cabecera {
+        height: 10px;
+        flex-direction: row;
+        padding: 10px 0;
+       flex-grow: initial;
+    }
+
+    .cabecera__logo {
+        width: 2px;
+        height: 2px;
+    }
+
+    .navegacion__lista {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    
+    .navegacion__elemento a {
+        font-size: 0.9rem;
+    }
+
+
+    .contenedor__presentacion {
+        padding-top: 1px;
+        background-size: contain; 
+        width: 480px;
+        margin-left :4px;
+        justify-content: center;
+    }
+
+    .presentacion__texto {
+        padding: 15px;
+        text-align: center;
+        width: 250px;
+        font-size: 0.8rem;
+        margin-top: 80px;
+        text-align: justify ;
+        
+    }
+
+    .contenedor__sobremi {
+      flex-direction:row;
+      gap:0.5px;
+    }
+
+    .sobre-mi__texto {
+        padding: 6px;
+        width: 200px;
+        text-align: justify;
+    }
+
+     
+   .aficiones__lista {   
+        gap:1px;      
+   }
+/*
+.aficiones__elemento {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: left;
+    justify-content: center;
+    text-align: center;
+}*/
+
+
+    .habilidades__lista {
+        margin-top: 190px;
+        margin-left: 30px;
+        grid-template-columns: repeat(3, minmax(150px, 120px));
+        gap:20px
+    }
+
+    
+    .habilidades__elemento{
+        width: 80px;
+        height: 50px;
+        gap:1px;
+     
+    }
+
+    .formacion__lista {
+        margin-top: 190px;
+        margin-left: 80px;
+        grid-template-columns: repeat(3, minmax(50px, 120px));
+        gap: 4px;
+    }
+
+    .formacion__elemento{
+        width: 100px;
+        height: 120px;
+        
+        font-size: 0.6rem;
+    }
+
+    .habilidades__icono, .aficiones__icono {
+        width: 20px;
+        height: 20px;
+    }
+
+    .habilidades__nombre, .aficiones__nombre {
+        font-size: 9px;
+    }
+    .proyectos__elemento {
+        width: 380px;
+        height: 200px;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .proyectos__nombre {
+        font-size: 0.6rem;
+    }
+
+    .logoGithub{
+        margin-top: 190px;
+        size: 50px;
+    }
+
+    .contenedor__contacto{
+        display: flex;
+        width: 480px;
+        background-size: contain; 
+        background-repeat: no-repeat;
+        align-items: center;
+      }
+
+    .contacto__redes {
+        margin-top: 620px;
+        size: 50px;
+    }    
+    .contacto__formulario {
+        width: 250px;
+        max-width: 480px;
+        margin-top: 100px;
+        margin-left: 90px;
+        padding: 1rem;
+        background-color: #f8e6e6;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        
+    }
+    .contacto__campo {
+        width: 200px;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .contacto__button {
+        width: 150px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin-left: 50px;
+
+      }
+
+   
+}
